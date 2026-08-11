@@ -1,0 +1,85 @@
+body{
+    height: 100vh;
+    /* width: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(70, 26, 99);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    color: rgb(241, 159, 228);
+    text-shadow: 0px 0px 0.3px white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 0.5rem;
+    background-color: rgba(247, 164, 255, 0.795);
+}
+
+#inputName,#inputBpm,#inputAr{
+    border-radius: 0.3rem;
+    border: none;
+    margin: 3px;
+    padding: 5px;
+
+}
+
+#btn-input{
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.content{
+    height: 500px;
+    width: 100%;
+    background-color: rgba(244, 123, 255, 0.226);
+    color: rgb(202, 171, 123);
+    text-shadow: 0 0 0.3px rgb(228, 149, 149);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    overflow: auto;
+    border-radius: 0.4rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(33, 54, 73, 0.13);
+    padding: 15px;
+    border-radius: 0.4rem;
+    width: 40%;
+    
+}
+
+.song{
+    background-color: rgba(59, 53, 44, 0.445);
+    border-radius: 0.4rem;
+    width: fit-content;
+    padding: 3px;
+    margin: 1.5px;
+    cursor: pointer;
+}
+
+p{
+    margin: 0;
+}

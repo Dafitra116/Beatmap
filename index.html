@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Beatmap</h1>
+
+    </div>
+    <div class="input">
+        <div class="container">
+            <input id="inputName" type="text" placeholder="nama Beatmap">
+            <input id="inputBpm" type="text" placeholder="Bpm">
+            <input id="inputAr" type="text" placeholder="ar">
+            <select id="inputTipe">
+                <option value="Keduanya">Keduanya</option>
+                <option value="Stream">Stream</option>
+                <option value="DT">DT</option>
+            </select>
+            <button id="btn-input">input</button>
+
+        </div>
+    </div>
+    <div class="content">
+        <div class="card">
+
+            <h1 id="stream" style="margin: 0;">Stream:</h1>
+            <h3 id="160bpm">160bpm</h3>
+
+            <ul id="ulStream160" style="margin: 0;"></ul>
+            <h3 id="180bpm">180bpm</h3>
+            <ul id="ulStream180" style="margin: 0;"></ul>
+            <h3 id="190bpm">190bpm</h3>
+            <ul id="ulStream190" style="margin: 0;"></ul>
+            <h3 id="200bpm">200>bpm</h3>
+            <ul id="ulStream200" style="margin: 0;"></ul>
+        </div>
+
+        <div class="card">
+
+            <h1 id="dt" style="margin: 0;">DT:</h1>
+            <h3 id="ar8">base ar8></h3>
+
+            <ul id="ulDTar8" style="margin: 0;"></ul>
+            <h3 id="ar9">base ar9></h3>
+            <ul id="ulDTar9" style="margin: 0;"></ul>
+            
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
