@@ -24,7 +24,16 @@ function renderBeatmaps (){
     beatmaps.forEach((beatmap) => {
         if(beatmap.kategori.includes("Stream-bpm160")){
             const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
             li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
             const pName = document.createElement("p")
             pName.textContent = `${beatmap.nama}`
@@ -33,16 +42,28 @@ function renderBeatmaps (){
             pBpm.textContent = `${beatmap.bpm}bpm`
             const pAr = document.createElement("p")
             pAr.textContent = `ar${beatmap.ar}`
-
-            li.appendChild(pName)
-            li.appendChild(pBpm)
-            li.appendChild(pAr)
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
             
             ulStream160.appendChild(li)
         }
         if(beatmap.kategori.includes("Stream-bpm180")){
             const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
             li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
             const pName = document.createElement("p")
             pName.textContent = `${beatmap.nama}`
@@ -51,16 +72,28 @@ function renderBeatmaps (){
             pBpm.textContent = `${beatmap.bpm}bpm`
             const pAr = document.createElement("p")
             pAr.textContent = `ar${beatmap.ar}`
-
-            li.appendChild(pName)
-            li.appendChild(pBpm)
-            li.appendChild(pAr)
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
             
             ulStream180.appendChild(li)
         }
         if(beatmap.kategori.includes("Stream-bpm190")){
             const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
             li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
             const pName = document.createElement("p")
             pName.textContent = `${beatmap.nama}`
@@ -69,16 +102,28 @@ function renderBeatmaps (){
             pBpm.textContent = `${beatmap.bpm}bpm`
             const pAr = document.createElement("p")
             pAr.textContent = `ar${beatmap.ar}`
-
-            li.appendChild(pName)
-            li.appendChild(pBpm)
-            li.appendChild(pAr)
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
             
             ulStream190.appendChild(li)
         }
         if(beatmap.kategori.includes("Stream-bpm200")){
             const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
             li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
             const pName = document.createElement("p")
             pName.textContent = `${beatmap.nama}`
@@ -87,17 +132,29 @@ function renderBeatmaps (){
             pBpm.textContent = `${beatmap.bpm}bpm`
             const pAr = document.createElement("p")
             pAr.textContent = `ar${beatmap.ar}`
-
-            li.appendChild(pName)
-            li.appendChild(pBpm)
-            li.appendChild(pAr)
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
             
             ulStream200.appendChild(li)
         }
 
         if(beatmap.kategori.includes("DT-ar8")){
             const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
             li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
             const pName = document.createElement("p")
             pName.textContent = `${beatmap.nama}`
@@ -106,16 +163,28 @@ function renderBeatmaps (){
             pBpm.textContent = `${beatmap.bpm}bpm`
             const pAr = document.createElement("p")
             pAr.textContent = `ar${beatmap.ar}`
-
-            li.appendChild(pName)
-            li.appendChild(pBpm)
-            li.appendChild(pAr)
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
             
             ulDTar8.appendChild(li)
         }
         if(beatmap.kategori.includes("DT-ar9")){
             const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
             li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
             const pName = document.createElement("p")
             pName.textContent = `${beatmap.nama}`
@@ -124,10 +193,13 @@ function renderBeatmaps (){
             pBpm.textContent = `${beatmap.bpm}bpm`
             const pAr = document.createElement("p")
             pAr.textContent = `ar${beatmap.ar}`
-
-            li.appendChild(pName)
-            li.appendChild(pBpm)
-            li.appendChild(pAr)
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
             
             ulDTar9.appendChild(li)
         }

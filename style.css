@@ -38,14 +38,30 @@ body{
     border: none;
     margin: 3px;
     padding: 5px;
+    width: 50%;
 
 }
 
+.inputTipe{
+    border-radius: 0.4rem;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+
 #btn-input{
-    padding: 5px;
+    padding: 10px;
     margin-top: 5px;
+    width: 50%;
     border-radius: 0.3rem;
     border: none;
+    background-color: #111827b0;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#btn-input:hover{
+    background-color: #111827;
 }
 
 .content{
@@ -59,6 +75,7 @@ body{
     gap: 50px;
     overflow: auto;
     border-radius: 0.4rem;
+    padding: 10px;
 }
 
 .card{
@@ -71,15 +88,62 @@ body{
     
 }
 
-.song{
-    background-color: rgba(59, 53, 44, 0.445);
+.song {
+    position: relative;
+    padding: 10px;
     border-radius: 0.4rem;
     width: fit-content;
-    padding: 3px;
-    margin: 1.5px;
-    cursor: pointer;
+    margin-top: 5px;
+    /* overflow: hidden; */
 }
 
-p{
+.konten-bg{
+    position: relative;
+    /* margin-top: 15px; */
+    z-index: 2;
+    background-color: rgb(59, 53, 44);
+    margin: -10px;
+    padding: 7px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    /* width: fit-content; */
+
+}
+
+p {
+    /* position: relative; */
     margin: 0;
+    /* z-index: 3; */
+}
+
+.btnHapus{
+    position: absolute;
+    bottom: 0;
+    right: -11px;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    background: rgb(245, 32, 32);
+    padding: 0;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btnHapus:hover{
+    right: -27px;
+    position: absolute;
+}
+
+.iconHapus {
+    position: relative;
+    bottom: -19px;
+    letter-spacing: 1px;
+    rotate: 90deg;
+    color: rgb(116, 78, 78);
+    font-size: 14px;
+    font-weight: 700;
+    /* justify-self: center; */
 }
