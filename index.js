@@ -21,7 +21,14 @@ function renderBeatmaps (){
     ulDTar8.innerHTML = ""
     ulDTar9.innerHTML = ""
 
-    beatmaps.forEach((beatmap) => {
+    beatmaps.forEach((beatmap, index) => {
+        
+        function hapusBeatmap(){
+            beatmaps.splice(index, 1)
+            localStorage.setItem("beatmaps", JSON.stringify(beatmaps))
+            renderBeatmaps()
+        }
+        
         if(beatmap.kategori.includes("Stream-bpm160")){
             const li = document.createElement("li")
             const btnHapus = document.createElement("div")
@@ -49,6 +56,8 @@ function renderBeatmaps (){
             kontenBg.appendChild(pBpm)
             kontenBg.appendChild(pAr)
             li.appendChild(kontenBg)
+            
+            btnHapus.addEventListener("click", hapusBeatmap)
             
             ulStream160.appendChild(li)
         }
@@ -80,6 +89,8 @@ function renderBeatmaps (){
             kontenBg.appendChild(pAr)
             li.appendChild(kontenBg)
             
+            btnHapus.addEventListener("click", hapusBeatmap)
+            
             ulStream180.appendChild(li)
         }
         if(beatmap.kategori.includes("Stream-bpm190")){
@@ -110,6 +121,8 @@ function renderBeatmaps (){
             kontenBg.appendChild(pAr)
             li.appendChild(kontenBg)
             
+            btnHapus.addEventListener("click", hapusBeatmap)
+            
             ulStream190.appendChild(li)
         }
         if(beatmap.kategori.includes("Stream-bpm200")){
@@ -139,6 +152,8 @@ function renderBeatmaps (){
             kontenBg.appendChild(pBpm)
             kontenBg.appendChild(pAr)
             li.appendChild(kontenBg)
+            
+            btnHapus.addEventListener("click", hapusBeatmap)
             
             ulStream200.appendChild(li)
         }
@@ -171,6 +186,8 @@ function renderBeatmaps (){
             kontenBg.appendChild(pAr)
             li.appendChild(kontenBg)
             
+            btnHapus.addEventListener("click", hapusBeatmap)
+            
             ulDTar8.appendChild(li)
         }
         if(beatmap.kategori.includes("DT-ar9")){
@@ -200,6 +217,8 @@ function renderBeatmaps (){
             kontenBg.appendChild(pBpm)
             kontenBg.appendChild(pAr)
             li.appendChild(kontenBg)
+            
+            btnHapus.addEventListener("click", hapusBeatmap)
             
             ulDTar9.appendChild(li)
         }
