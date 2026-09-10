@@ -312,7 +312,7 @@ btnInput.addEventListener("click", function (){
     if(inputTipe.value === "Any"){
         if(ar >= 9){
             kategoriAr = "Any-ar9"
-        } else if(ar <= 8){
+        } else {
             kategoriAr = "Any-ar8"
         }
     }
@@ -323,7 +323,7 @@ btnInput.addEventListener("click", function (){
         } else if(ar >= 8){
             kategoriAr = "DT-ar8"
         } else {
-            kategoriAr = "Any"
+            kategoriAr = "Any-ar8"
         }
 
     }
