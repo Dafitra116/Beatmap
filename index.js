@@ -27,75 +27,79 @@ function renderBeatmaps (){
 
     beatmaps.forEach((beatmap, index) => {
             
-            function hapusBeatmap(){
-                beatmaps.splice(index, 1)
-                localStorage.setItem("beatmaps", JSON.stringify(beatmaps))
-                renderBeatmaps()
-            }
+        function hapusBeatmap(){
+            beatmaps.splice(index, 1)
+            localStorage.setItem("beatmaps", JSON.stringify(beatmaps))
+            renderBeatmaps()
+        }
+        
+        if(beatmap.kategori.includes("Any-ar8")){
+            const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
+            li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
             
-            if(beatmap.kategori.includes("Any-ar8")){
-                const li = document.createElement("li")
-                const btnHapus = document.createElement("div")
-                const kontenBg = document.createElement("div")
-                const iconHapus = document.createElement("p")
-    
-                btnHapus.className = "btnHapus"
-                iconHapus.className = "iconHapus"
-                li.className = "song"
-                kontenBg.className = "konten-bg"
-    
-                iconHapus.textContent = "DELETE"
-                
-                const pName = document.createElement("p")
-                pName.textContent = `${beatmap.nama}`
-                pName.style.textDecoration = "underline"
-                const pBpm = document.createElement("p")
-                pBpm.textContent = `${beatmap.bpm}bpm`
-                const pAr = document.createElement("p")
-                pAr.textContent = `ar${beatmap.ar}`
-                
-                btnHapus.appendChild(iconHapus)
-                li.appendChild(btnHapus)
-                kontenBg.appendChild(pName)
-                kontenBg.appendChild(pBpm)
-                kontenBg.appendChild(pAr)
-                li.appendChild(kontenBg)
-                
-                ulAnyAr8.appendChild(li)
-            }
-            if(beatmap.kategori.includes("Any-ar9")){
-                const li = document.createElement("li")
-                const btnHapus = document.createElement("div")
-                const kontenBg = document.createElement("div")
-                const iconHapus = document.createElement("p")
-    
-                btnHapus.className = "btnHapus"
-                iconHapus.className = "iconHapus"
-                li.className = "song"
-                kontenBg.className = "konten-bg"
-    
-                iconHapus.textContent = "DELETE"
-                
-                const pName = document.createElement("p")
-                pName.textContent = `${beatmap.nama}`
-                pName.style.textDecoration = "underline"
-                const pBpm = document.createElement("p")
-                pBpm.textContent = `${beatmap.bpm}bpm`
-                const pAr = document.createElement("p")
-                pAr.textContent = `ar${beatmap.ar}`
-                
-                btnHapus.appendChild(iconHapus)
-                li.appendChild(btnHapus)
-                kontenBg.appendChild(pName)
-                kontenBg.appendChild(pBpm)
-                kontenBg.appendChild(pAr)
-                li.appendChild(kontenBg)
-                
-                ulAnyAr9.appendChild(li)
-            }
-            if(beatmap.kategori.includes("Stream-bpm160")){
-                const li = document.createElement("li")
-                const btnHapus = document.createElement("div")
+            const pName = document.createElement("p")
+            pName.textContent = `${beatmap.nama}`
+            pName.style.textDecoration = "underline"
+            const pBpm = document.createElement("p")
+            pBpm.textContent = `${beatmap.bpm}bpm`
+            const pAr = document.createElement("p")
+            pAr.textContent = `ar${beatmap.ar}`
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
+            
+            btnHapus.addEventListener("click", hapusBeatmap)
+            
+            ulAnyAr8.appendChild(li)
+        }
+        if(beatmap.kategori.includes("Any-ar9")){
+            const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+            
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
+            li.className = "song"
+            kontenBg.className = "konten-bg"
+            
+            iconHapus.textContent = "DELETE"
+            
+            const pName = document.createElement("p")
+            pName.textContent = `${beatmap.nama}`
+            pName.style.textDecoration = "underline"
+            const pBpm = document.createElement("p")
+            pBpm.textContent = `${beatmap.bpm}bpm`
+            const pAr = document.createElement("p")
+            pAr.textContent = `ar${beatmap.ar}`
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
+            
+            btnHapus.addEventListener("click", hapusBeatmap)
+
+            ulAnyAr9.appendChild(li)
+        }
+        if(beatmap.kategori.includes("Stream-bpm160")){
+            const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
             const kontenBg = document.createElement("div")
             const iconHapus = document.createElement("p")
 
@@ -299,7 +303,10 @@ btnInput.addEventListener("click", function (){
 
     if(inputName.value === "" ||  inputBpm.value === "" || inputAr.value === ""){
         return alert("jangan kosong(empty)")
+    }
 
+    if (isNaN(inputBpm.value) || isNaN(inputAr.value)){
+        return alert("harus angka(number only)")
     }
 
     if(inputTipe.value === "Any"){
@@ -308,8 +315,6 @@ btnInput.addEventListener("click", function (){
         } else if(ar <= 8){
             kategoriAr = "Any-ar8"
         }
-    if (isNaN(inputBpm.value) || isNaN(inputAr.value)){
-        return alert("harus angka(number only)")
     }
     
     if(inputTipe.value === "DT" || inputTipe.value === "Keduanya"){
