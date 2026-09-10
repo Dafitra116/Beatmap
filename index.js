@@ -234,8 +234,10 @@ btnInput.addEventListener("click", function (){
     let kategoriAr = ""
 
     if(inputName.value === "" ||  inputBpm === "" || inputAr === ""){
-        return alert("jangan kosong")
+        return alert("jangan kosong(empty)")
 
+    } else if (inputBpm === NaN || inputAr === NaN){
+        return alert("harus angka(number only)")
     }
     
     if(inputTipe.value === "DT" || inputTipe.value === "Keduanya"){
