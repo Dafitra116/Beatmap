@@ -233,10 +233,11 @@ btnInput.addEventListener("click", function (){
     let kategoriBpm = ""
     let kategoriAr = ""
 
-    if(inputName.value === "" ||  inputBpm === "" || inputAr === ""){
+    if(inputName.value === "" ||  inputBpm.value === "" || inputAr.value === ""){
         return alert("jangan kosong(empty)")
 
-    } else if (inputBpm === NaN || inputAr === NaN){
+    }
+    if (isNaN(inputBpm.value) || isNaN(inputAr.value)){
         return alert("harus angka(number only)")
     }
     
