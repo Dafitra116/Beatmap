@@ -17,7 +17,8 @@
             <input id="inputBpm" type="text" placeholder="Bpm">
             <input id="inputAr" type="text" placeholder="ar">
             <select class="inputTipe" id="inputTipe">
-                <option value="Keduanya">Keduanya</option>
+                <option value="Any">Any</option>
+                <option value="Keduanya">Stream&DT</option>
                 <option value="Stream">Stream</option>
                 <option value="DT">DT</option>
             </select>
@@ -27,10 +28,19 @@
     </div>
     <div class="content">
         <div class="card">
+            <h1 id="any" style="margin: 0;">Any</h1>
+            
+            <h3 id="ar8">ar&lt;9</h3>
+            <ul id="ulAnyAr8" style="margin: 0;"></ul>
+            <h3 id="ar9">ar9></h3>
+            <ul id="ulAnyAr9" style="margin: 0;"></ul>
+        </div>
+        
+        <div class="card">
 
             <h1 id="stream" style="margin: 0;">Stream:</h1>
-            <h3 id="160bpm">160bpm</h3>
 
+            <h3 id="160bpm">160bpm</h3>
             <ul id="ulStream160" style="margin: 0;"></ul>
             <h3 id="180bpm">180bpm</h3>
             <ul id="ulStream180" style="margin: 0;"></ul>
@@ -43,8 +53,8 @@
         <div class="card">
 
             <h1 id="dt" style="margin: 0;">DT:</h1>
-            <h3 id="ar8">base ar8></h3>
 
+            <h3 id="ar8">base ar8></h3>
             <ul id="ulDTar8" style="margin: 0;"></ul>
             <h3 id="ar9">base ar9></h3>
             <ul id="ulDTar9" style="margin: 0;"></ul>

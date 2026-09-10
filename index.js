@@ -9,6 +9,8 @@ const ulStream190 = document.getElementById("ulStream190")
 const ulStream200 = document.getElementById("ulStream200")
 const ulDTar8 = document.getElementById("ulDTar8")
 const ulDTar9 = document.getElementById("ulDTar9")
+const ulAnyAr8 = document.getElementById("ulAnyAr8")
+const ulAnyAr9 = document.getElementById("ulAnyAr9")
 const inputTipe = document.getElementById("inputTipe")
 
 const beatmaps = JSON.parse(localStorage.getItem("beatmaps")) || []
@@ -20,8 +22,70 @@ function renderBeatmaps (){
     ulStream200.innerHTML = ""
     ulDTar8.innerHTML = ""
     ulDTar9.innerHTML = ""
+    ulAnyAr8.innerHTML = ""
+    ulAnyAr9.innerHTML = ""
 
     beatmaps.forEach((beatmap) => {
+        if(beatmap.kategori.includes("Any-ar8")){
+            const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
+            li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
+            
+            const pName = document.createElement("p")
+            pName.textContent = `${beatmap.nama}`
+            pName.style.textDecoration = "underline"
+            const pBpm = document.createElement("p")
+            pBpm.textContent = `${beatmap.bpm}bpm`
+            const pAr = document.createElement("p")
+            pAr.textContent = `ar${beatmap.ar}`
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
+            
+            ulAnyAr8.appendChild(li)
+        }
+        if(beatmap.kategori.includes("Any-ar9")){
+            const li = document.createElement("li")
+            const btnHapus = document.createElement("div")
+            const kontenBg = document.createElement("div")
+            const iconHapus = document.createElement("p")
+
+            btnHapus.className = "btnHapus"
+            iconHapus.className = "iconHapus"
+            li.className = "song"
+            kontenBg.className = "konten-bg"
+
+            iconHapus.textContent = "DELETE"
+            
+            const pName = document.createElement("p")
+            pName.textContent = `${beatmap.nama}`
+            pName.style.textDecoration = "underline"
+            const pBpm = document.createElement("p")
+            pBpm.textContent = `${beatmap.bpm}bpm`
+            const pAr = document.createElement("p")
+            pAr.textContent = `ar${beatmap.ar}`
+            
+            btnHapus.appendChild(iconHapus)
+            li.appendChild(btnHapus)
+            kontenBg.appendChild(pName)
+            kontenBg.appendChild(pBpm)
+            kontenBg.appendChild(pAr)
+            li.appendChild(kontenBg)
+            
+            ulAnyAr9.appendChild(li)
+        }
         if(beatmap.kategori.includes("Stream-bpm160")){
             const li = document.createElement("li")
             const btnHapus = document.createElement("div")
@@ -218,6 +282,14 @@ btnInput.addEventListener("click", function (){
         return alert("jangan kosong")
 
     }
+
+    if(inputTipe.value === "Any"){
+        if(ar >= 9){
+            kategoriAr = "Any-ar9"
+        } else if(ar <= 8){
+            kategoriAr = "Any-ar8"
+        }
+    }
     
     if(inputTipe.value === "DT" || inputTipe.value === "Keduanya"){
         if(ar >= 9){
@@ -225,7 +297,7 @@ btnInput.addEventListener("click", function (){
         } else if(ar >= 8){
             kategoriAr = "DT-ar8"
         } else {
-            kategoriAr = "lainnya"
+            kategoriAr = "Any"
         }
 
     }
@@ -240,7 +312,7 @@ btnInput.addEventListener("click", function (){
         } else if (bpm >= 160) {
             kategoriBpm = "Stream-bpm160"
         } else {
-            kategoriBpm = "lainnya"
+            kategoriBpm = "Any"
         }
 
     }
